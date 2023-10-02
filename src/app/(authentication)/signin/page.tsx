@@ -1,9 +1,9 @@
 import Image from "next/image";
 import landing from "/public/landing-bg.png";
 import SignInForm from "@/components/SignInComponent";
-export default function Home() {
+function page() {
   return (
-    <main className="flex w-full h-screen">
+    <div className="flex w-full h-screen">
       <div className="w-4/6 h-full">
         <Image
           src={landing}
@@ -14,6 +14,8 @@ export default function Home() {
       <div className="w-2/6 justify-center">
         <SignInForm />
       </div>
-    </main>
+    </div>
   );
 }
+
+export default page;
