@@ -1,6 +1,6 @@
 import Image from "next/image";
 import landing from "/public/landing-bg.png";
-import SignInForm from "@/components/SignInComponent";
+import SignInForm from "@/components/SignInForm";
 export default function Home() {
   return (
     <main className="flex w-full h-screen">
