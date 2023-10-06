@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "../globals.css";
 import { Laila } from "next/font/google";
+import NavItem from "@/components/NavItem";
 const laila = Laila({
   weight: "400",
   subsets: ["latin"],
@@ -15,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="vi" className={laila.className}>
       <body className="flex">
-        <div className="w-1/4">
+        <div id="navbar" className="w-1/4">
           <Navbar />
         </div>
-        <div className="w-3/4">{children}</div>
+        <div id="main-content" className="w-3/4">
+          {children}
+        </div>
       </body>
     </html>
   );

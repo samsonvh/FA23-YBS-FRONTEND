@@ -1,23 +1,21 @@
+import { ReactNode } from "react";
 import Avatar from "/public/avatar.png";
 import Image from "next/image";
-import Link from "next/link";
-const Navbar = () => {
+
+const Navbar = (
+  {navlist} : {navlist : ReactNode}
+) => {
   return (
-    <div className="bg-blue-900 h-screen">
-      <div id="content" className="flex flex-col px-5 py-10 text-white">
-        <h1 className="font-semibold text-3xl text-center h-20">
-          YSB Management Portal
-        </h1>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Image src={Avatar} alt="Avatar" />
-            <p className="ml-3">Welcome, user</p>
-          </div>
-          <div>
-            <Link href={"/"}>Log out</Link>
-          </div>
+    <div id="navbar-background" className="bg-[#0B4D8F] h-screen">
+        <div id="logo-container" className="flex justify-center py-6 max-h-[12%]">
+          <h1 className="font-bold text-white w-fit lg:text-2xl xl:text-3xl">YBS Management Portal</h1>
         </div>
-      </div>
+        <div id="user-container" className="lg:px-6 xl:px-10 h-[8%]">
+          <Image id="avatar" className="rounded-full" src={Avatar} alt="Avatar"/>
+        </div>
+        <ul id="navlist" className="h-4/5">
+          {navlist}
+        </ul>
     </div>
   );
 };
