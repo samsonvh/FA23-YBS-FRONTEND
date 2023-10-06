@@ -8,13 +8,13 @@ const laila = Laila({
   display: "swap",
 });
 
-const Navlist = () =>{
+const Navlist = () => {
   return (
     <>
-      <NavItem name="Accounts" href="admin/accounts"/>
-      <NavItem name="Companies" href="admin/companies"/>
-      <NavItem name="Members" href="admin/members"/>
-      <NavItem name="Membership Packages" href="admin/membership-packages"/>
+      <NavItem name="Accounts" href="admin/accounts" />
+      <NavItem name="Companies" href="admin/companies" />
+      <NavItem name="Members" href="admin/members" />
+      <NavItem name="Membership Packages" href="admin/membership-packages" />
     </>
   )
 }
@@ -27,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="vi" className={laila.className}>
       <body className="flex">
-        <div className="w-1/4">
-          <Navbar navlist={<Navlist/>}/>
+        <div className="w-1/5">
+          <Navbar navlist={<Navlist />} />
         </div>
-        <div className="w-3/4">{children}</div>
+        <div className="w-4/5">
+          {children}
+        </div>
       </body>
     </html>
   );

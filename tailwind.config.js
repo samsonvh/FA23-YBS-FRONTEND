@@ -67,16 +67,16 @@ module.exports = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-dow8": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
     fontSize: {
       sm: '0.8rem',
       base: '1rem',
-      xl: '1.25rem',
-      '2xl': '1.4rem',
-      '3xl': '2.2rem',
+      xl: '1.1rem',
+      '2xl': '1.3rem',
+      '3xl': '1.8rem',
       '4xl': '2.441rem',
       '5xl': '3.052rem',
     }
