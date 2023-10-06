@@ -1,11 +1,8 @@
+import { redirect } from "next/navigation";
 import React from "react";
 
 const admin_page = () => {
-  return (
-    <div id="main-content" className="h-screen">
-      admin page
-    </div>
-  );
+  redirect("/admin/accounts");
 };
 
 export default admin_page;
