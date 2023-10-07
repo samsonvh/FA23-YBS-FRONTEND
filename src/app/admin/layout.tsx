@@ -1,14 +1,14 @@
 import { Metadata } from "next";
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 import NavItem from "@/components/NavItem";
 
 const Navlist = () => {
     return (
         <>
-            <NavItem href="admin/accounts" name="Accounts" />
-            <NavItem href="admin/companies" name="Companies" />
-            <NavItem href="admin/members" name="Members" />
-            <NavItem href="admin/membership-packages" name="Membership Packages" />
+            <NavItem id="accounts" href="/admin/accounts" name="Accounts" />
+            <NavItem id="companies" href="/admin/companies" name="Companies" />
+            <NavItem id="members" href="/admin/members" name="Members" />
+            <NavItem id="mem-packs" href="/admin/membership-packages" name="Membership Packages" />
         </>
     )
 }
@@ -24,17 +24,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body>
-                <div id="body-content" className="flex w-screen overflow-hidden">
-                    <div id="navbar" className="w-1/5">
-                        <Navbar>
-                            <Navlist />
-                        </Navbar>
-                    </div>
-                    <main className="w-4/5">{children}</main>
-                </div>
-            </body>
-        </html>
+        <div id="body-content" className="flex w-screen overflow-hidden">
+            <div id="navbar" className="w-1/5">
+                <Navbar>
+                    <Navlist />
+                </Navbar>
+            </div>
+            <main className="w-4/5">{children}</main>
+        </div>
     );
 }
