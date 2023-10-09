@@ -1,10 +1,10 @@
-import SignInForm from "@/components/LoginForm/SignInForm";
+import SignInForm from "@/components/signInForm/SignInForm";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import LandingLogo from "/public/blue_logo.svg";
 
 const GoogleSignInButton = dynamic(
-  () => import("@/components/LoginForm/GoogleSignInButton"),
+  () => import("@/components/signInForm/GoogleSignInButton"),
   { ssr: false },
 );
 
