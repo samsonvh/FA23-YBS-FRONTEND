@@ -1,7 +1,7 @@
 import SignInForm from "@/components/signInForm/SignInForm";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import LandingLogo from "/public/blue_logo.svg";
+// import LandingLogo from "public/blue_logo.svg";
 
 const GoogleSignInButton = dynamic(
   () => import("@/components/signInForm/GoogleSignInButton"),
@@ -19,7 +19,8 @@ export default function Home() {
           id="logo-container"
           className="mx-auto aspect-square w-2/6"
         >
-          <Image src={LandingLogo} alt="Logo" className="sm:mt-4 xl:mt-12 sm:scale-[2.5] xl:scale-[3]"/>
+          {/* <Image src={LandingLogo} alt="Logo" className="sm:mt-4 xl:mt-12 sm:scale-[2.5] xl:scale-[3]"/> */}
+
         </div>
       </div>
       <div
@@ -30,7 +31,7 @@ export default function Home() {
           id="logo-container"
           className="sm:hidden mx-auto aspect-square w-4/6"
         >
-          <Image src={LandingLogo} alt="Logo" className="sm:mt-4 xl:mt-12 scale-[1.5]"/>
+          {/* <Image src={LandingLogo} alt="Logo" className="sm:mt-4 xl:mt-12 scale-[1.5]" /> */}
         </div>
         <h1 className="mx-auto mb-8 sm:mb-12 xl:mb-14 text-3xl sm:text-3xl xl:text-5xl font-semibold text-[#0B4D8F] drop-shadow-xl">
           Management Portal
